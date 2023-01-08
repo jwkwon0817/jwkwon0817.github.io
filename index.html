@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <title>Project</title>
+</head>
+<body>
+    <h1 id="#top">프로젝트</h1>
+    <h3>간단한 숫자 야구 게임</h3>
+    <hr>
+
+    <nav>
+        <div>
+            <a href="#info" class="on"><span>설명</span></a>
+            <a href="#problem"><span>문제</span></a>
+            <a href="#function"><span>원하는 기능</span></a>
+            <a href="#rules"><span>규칙</span></a>
+            <a href="#team"><span>팀원</span></a>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="box" id="info"></div>
+    <div>
+        <h4>설명</h4>
+        <div class="p" >
+            <b>주제:</b> Java 언어를 사용하여 간단한 숫자 야구 게임 만들기
+            <li>Java 스터디이기 때문에 Java 언어 사용</li>
+            <li>이전 스터디 내용인 변수, 연산자, 조건문과 반복문 사용과 이번 스터디 내용인 메소드 선언과 호출 같은 내용을 참고하여 구성</li>
+        </div>
+        <hr>
+    </div>
+
+    <div class="box" id="problem"></div>
+    <div>
+        <h4>문제</h4>
+        <div class="p">
+            <p>게임이 끝난 후 재시작 문구<b>(Y/N)</b>으로 재시작 여부 확인 후 재시작 혹은 게임 종료 기능 추가에 문제가 많았고 이를 해결</p>
+        </div>
+        <hr>
+    </div>
+
+    <div class="box" id="function"></div>
+    <div>
+        <h4 style="padding-left: 15px;">원하는 기능</h4>
+        <div class="p">
+            추가하고 싶은 기능으로는 사용자가 입력했을 때 일어날 더 많은 오류를 해결하는 것(첫 입력에 숫자를 0~9가 아닌 경우 입력 시 자동으로 다시 수를 입력받을 수 있게 하는 기능)
+        </div>
+        <hr>
+    </div>
+
+    <div class="box" id="rules"></div>
+    <div>
+        <h4>규칙</h4>
+        <div class="p">
+            <ul>
+                <li><b>1.</b> 숫자는 띄어쓰기로 구분한다.</li>
+                <li><b>2.</b> 숫자가 같고 위치까지 같으면 스트라이크</li>
+                <li><b>3.</b> 숫자가 같지만 위치는 다르다면 볼</li>
+                <li><b>4.</b> 숫자가 다르다면 아웃</li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+    <div class="box" id="team"></div>
+    <div>
+        <h4>팀원</h4>
+        <div class="p">
+            <ul>
+                <li>anddl#9814</li>
+                <li>서화#3210</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="empty">
+    </div>
+    <div class="home">
+        <a href="#top"><span>홈</span></a>
+    </div>
+</body>
+</html>
+
+<style>
+    .box {
+        height: 40px;
+    }
+
+    h1 { text-align: center; border: 5px solid lightblue; border-radius: 30px; width: 300px; margin: 50px auto 10px auto; box-shadow: 5px 5px 5px lightgray; }
+
+    h3 { text-align: center; }
+
+    hr { margin-top: 20px; }
+
+    h4 { border: 3px solid #c6dedf; margin: auto; border-radius: 30px; padding-left: 65px; width: 100px; text-align: center; box-shadow: 3px 3px 10px gray; margin-bottom: 10px; height: 40px; display: flex; align-items: center }
+
+    div { margin: 20px; }
+
+    div#empty { height: 500px; }
+
+    div.p { text-align: center; }
+
+    div.p ul { display: table; margin: auto; }
+
+    body { background-color: white; }
+
+    div hr { width: 300px; margin: auto; box-shadow: 1px 1px 5px gray; background-color: #9abfdb border-color: #9afdbf}
+    
+    * { padding: 0; margin: 0; text-decoration: none; list-style: none; font-family: "Open Sans" sasns-serif}
+
+    nav { position: fixed; left: 0; top: 0; width: 100%; background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+    nav div { display: flex; position: relative; width: 500px; margin: 0 auto; }
+
+    nav div a { flex: 1; display: block; height: 40px; line-height: 40px; text-align: center; color: #8f8f8f; }
+
+    nav div a.on { color: #000; }
+
+    div.home a { font-size: 15px; text-align: center; float: right; border: 2px solid lightblue; margin-bottom: 10px; margin-right: -10px; border-radius: 10px; width: 20px; color: #3f3f3f; }
+
+    nav div > span { position: absolute; left: 0; bottom: 0; width: 100px; height: 3px; background: #279d76; opacity: 0; transition: all 0.5S; box-shadow: 1px 1px 5px green; }
+
+    nav div a:nth-child(1).on ~ span { left: 0; opacity: 1; }
+
+    nav div a:nth-child(2).on ~ span { left: 100px; opacity: 1; }
+
+    nav div a:nth-child(3).on ~ span { left: 200px; opacity: 1; }
+
+    nav div a:nth-child(4).on ~ span { left: 300px; opacity: 1; }
+
+    nav div a:nth-child(5).on ~ span { left: 400px; opacity: 1; }
+
+    html { scroll-behavior: smooth; }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('nav a').on('click', function() {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+
+            $(this)
+                .mousedown(function(event) {
+                    var idname = event.currentTarget.id;
+                    var location = document.querySelector("#{$idname}").offsetTop;
+                    window.scrollTo({top: location + 40, behavior: 'smooth'});
+                });
+        });
+    });
+
+
+</script>
